@@ -104,14 +104,4 @@ for(i in 1:nvar) {
   }		
 }
 
-#write.table(res,file="nfbc66_cpacor_resids.txt",sep="\t",col.names=T,row.names=T,quote=F)
-
-
-
-
-
-
-
-
-
-
+write.table(res,file="nfbc66_cpacor_resids.txt",sep="\t",col.names=T,row.names=T,quote=F)
