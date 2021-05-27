@@ -1,5 +1,7 @@
+# Table of contents
+{:toc}
 
-# Getting started
+# About this Repository
 
 # Meta analysis
 
