@@ -14,7 +14,9 @@ outdir='/rds/general/user/mwielsch/home/WORK/CRP/mendelian_randomization/nfbc66/
 i=$(sed -n ${tid}p /rds/general/user/mwielsch/home/WORK/CRP/mendelian_randomization/CpGcauseCRP_GWAS_list.txt | awk '{print $1}')
 k=$(sed -n ${tid}p /rds/general/user/mwielsch/home/WORK/CRP/mendelian_randomization/CpGcauseCRP_GWAS_list.txt | awk '{print $2}')
 
-#rvtest --inVcf ${indir}nfbc1966_for_meth.vcf.gz --pheno ${indir}MR_pheno_nfbc1966.pheno --pheno-name lnCRP --covar ${indir}MR_pheno_nfbc1966.covar --covar-name ${i},sex,age,CD8T,CD4T,NK,Bcell,Mono,Neu,Eos --rangeList ${k} --out ${outdir}DIRECT_EFF_${i} --kinship ${indir}nfbc1966_kinship.kinship --meta dominant --freqLower 0.025
+rvtest --inVcf ${indir}nfbc1966_for_meth.vcf.gz --pheno ${indir}MR_pheno_nfbc1966.pheno --pheno-name lnCRP --covar ${indir}MR_pheno_nfbc1966.covar\
+--covar-name ${i},sex,age,CD8T,CD4T,NK,Bcell,Mono,Neu,Eos --rangeList ${k} --out ${outdir}DIRECT_EFF_${i} --kinship ${indir}nfbc1966_kinship.kinship\
+--meta dominant --freqLower 0.025
 
 gzip -d ${outdir}DIRECT_EFF_${i}.MetaDominant.assoc.gz
 sed '/^#/ d' ${outdir}DIRECT_EFF_${i}.MetaDominant.assoc > ${outdir}DIRECT_EFF_${i}.MetaDominant
