@@ -36,4 +36,5 @@ EOF
 
 awk '{print $1"\t"$2"_"$5"_"$6"\t"$3"\t"$4"\t"$5"\t"$6}' ${data}nfbc1966_for_meth.bim > ${data}nfbc1966_for_meth_2.bim
 
-plink --bed ${data}nfbc1966_for_meth.bed --bim ${data}nfbc1966_for_meth_2.bim --fam ${data}nfbc1966_for_meth.fam --score ${wdr}CRP_GWAS_for_nfbc1966.grs --out ${wdr}crp_score_nfbc66 
+plink --bed ${data}nfbc1966_for_meth.bed --bim ${data}nfbc1966_for_meth_2.bim --fam ${data}nfbc1966_for_meth.fam\
+ --score ${wdr}CRP_GWAS_for_nfbc1966.grs --out ${wdr}crp_score_nfbc66 
