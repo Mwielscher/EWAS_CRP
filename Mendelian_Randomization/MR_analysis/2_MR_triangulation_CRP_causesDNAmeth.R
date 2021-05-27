@@ -1,5 +1,5 @@
 
-## -------------------------------   in script 1 we checked the effect sizes - then we performed a standard meta-analysis 
+## in script 1 we checked the effect sizes - then we performed a standard meta-analysis 
 # with METAL software to create the input file for this analsis 
 rm(list=ls())
 library(qqman)
@@ -82,8 +82,3 @@ binom.test(table(crp_tri$check>0)[2], nrow(crp_tri))
 
 write.csv(res2,file="MR_result_CRP_causes_DNA_meth.txt",quote=F)
 write.csv(crp_tri,file="TRIANGULATION_CRP_causes_DNA_meth.txt",quote=F)
-
-
-
-
-
