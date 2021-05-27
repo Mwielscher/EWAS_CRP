@@ -1,16 +1,16 @@
-# Table of contents
+## Table of contents
 
 
-# About this Repository
+## About this Repository
 
-# Meta analysis
+## Meta analysis
 
-# Mediation analysis
+## Mediation analysis
 
-# Mendelian Randomization
+## Mendelian Randomization
 
-# Overrepresentation analysis
+## Overrepresentation analysis
 
-# Associaiton to clinical phenotypes 
+## Associaiton to clinical phenotypes 
 
 
