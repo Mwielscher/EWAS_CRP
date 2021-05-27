@@ -1,6 +1,6 @@
 
 ## This script uses individual level data for 3 Cohorts (NFBC1966, NFBC1986 and Airwave). 
-## For KORA we used precomputed regresssion results)
+## For KORA we used precomputed regresssion results -- see script 1)
 
 rm(list=ls())
 #------------------------------------------------------
