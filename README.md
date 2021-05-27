@@ -1,5 +1,5 @@
 # Table of contents
-{:toc}
+
 
 # About this Repository
 
