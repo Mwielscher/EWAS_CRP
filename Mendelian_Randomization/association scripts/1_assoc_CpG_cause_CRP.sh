@@ -3,7 +3,7 @@
 #PBS -lwalltime=2:00:00
 #PBS -N run_assoc_66
 
-#subit qsub -J 1-1511 4_assoc_CpG_cause_CRP.sh
+#subit qsub -J 1-1511 1_assoc_CpG_cause_CRP.sh
 
 
 module load rvtests/2016-05-04
