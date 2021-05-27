@@ -73,19 +73,3 @@ ggplot(dat23,aes(x=coefficients, fill=COHORT)) + geom_density(alpha=0.25) + xlim
         axis.title.y =element_text(size=17)) 
 
 ###  -----------------  looks ok
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
