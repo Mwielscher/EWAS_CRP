@@ -1,11 +1,11 @@
 ## Table of contents
-# Table of Contents
 1. [About this Repository](#About-this-Repository)
 2. [Meta analysis](#Meta-analysis)
 3. [Mediation analysis](#Mediation-analysis)
 4. [Mendelian Randomization](#Mendelian-Randomization)
 4. [Overrepresentation analysis](#Overrepresentation-analysis)
 5. [Associaiton to clinical phenotypes](#Associaiton-to-clinical-phenotypes)
+<br/>
 ## About this Repository
 This repository accompanies the paper __"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__ 
 <br/><br/>
