@@ -43,8 +43,9 @@ We performed a Mendelian Randomization analysis to better understand the reasons
 To test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
 We provided scripts to prepare the genotype data for the regression analysis necessary to run the Mendelian Randomization analysis:  
+<p>
 >* [script]() to perform  
->* [script]() to do that
+>* [script]() to do that  
   
 ## Overrepresentation analysis
 
