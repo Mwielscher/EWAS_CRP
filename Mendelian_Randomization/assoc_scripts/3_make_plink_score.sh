@@ -26,6 +26,7 @@ for (k in 1:nrow(dat1)){
 	dat1\$grs_beta[k]=as.numeric(as.character(dat1\$grs_beta[k]))*-1
 	}
 }
+###  you can also let plink do the allele aligment for you.
 
 ID_new=paste(dat1\$ID,"_",dat1\$grs_A1,"_",dat1\$grs_A2,sep="")
 
