@@ -46,7 +46,9 @@ We provided scripts to prepare the genotype data for the regression analysis nec
 >* This QC [script](Mendelian_Randomization/prepare_dataset/QC_3_make_kinship_matrix.sh) will calculate a kinship matrix for your dataset. You can use this in your regression analysis to protect your results being under the influence of cryptic relatedness and population stratification. This was a very important step for NFBC data, but might not be necessary in your cohort   
 <p>
   
-continue here  
+Now that the dataset is ready we start with the regressions actually necessary to run a Mendelian Randomization analysis:  
+
+  
 ## Overrepresentation analysis
 
 ## Associaiton to clinical phenotypes 
