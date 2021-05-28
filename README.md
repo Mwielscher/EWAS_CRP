@@ -45,7 +45,7 @@ We provided scripts to prepare the genotype data for the regression analysis nec
 >* There are example files for every step of the way in this [folder](Mendelian_Randomization/example_files/). This should prevent you from getting stuck because some input file looks differnt  
 <p>
   
-Now that the dataset is ready we can __test hypothesis 1__, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
+Now that the dataset is ready we can **test hypothesis 1**, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
 >* [This](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) is how we were looking for instruments for CpG methylation sites. An example file defining the genomic regions for SNP selection can be found [here](Mendelian_Randomization/example_files/)  
 >* We also produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the CRP. This was done because we excluded SNPs with a direct effect on the CRP. That is if SNP~CRP + lnCRP gives a significant association between SNP and lnCRP if we add CRP as covariate to the model. 
@@ -53,16 +53,16 @@ Regressions were performed using [rvtests software](https://github.com/zhanxw/rv
   
 Finally we used the ratio method to determine significance in the Mendelian Randomization analysis as implemented in the [R package MendelianRandomization](https://academic.oup.com/ije/article/46/6/1734/3112150)and performed a triangulation analysis. This technically simple and was done with this [script](Mendelian_Randomization/MR_analysis/3_CpG_cause_final_version.R) the concept and motivation to do that is explained at the end of the next section.    
 
-To __test hypothesis 2__, we used the latest published [GWAS on CRP](https://www.cell.com/ajhg/fulltext/S0002-9297(18)30320-3) to define a set of instruments for CRP. In contrast to testing of hypothesis 1 where we rely on large scale GWAS summary statistics for the association to our outcome (CRP). As there is currently no large scale GWAS summary statistics for Illumina 450k CpG as an outcome available, we created a CRP polygenic risk score starting 52 SNPs. To generate a beta weighted risk score we used PLINK version 1.9. Next, we regressed the risk score against every sentinel CpG under an additive model. CpG ~CRPPRS + age + sex + blood cell estimates + genetic PC [1..10].
+To **test hypothesis 2**, we used the latest published [GWAS on CRP](https://www.cell.com/ajhg/fulltext/S0002-9297(18)30320-3) to define a set of instruments for CRP. In contrast to testing of hypothesis 1 where we rely on large scale GWAS summary statistics for the association to our outcome (CRP). As there is currently no large scale GWAS summary statistics for Illumina 450k CpG as an outcome available, we created a CRP polygenic risk score starting 52 SNPs. To generate a beta weighted risk score we used PLINK version 1.9. Next, we regressed the risk score against every sentinel CpG under an additive model. CpG ~CRPPRS + age + sex + blood cell estimates + genetic PC [1..10].
 
 >* [script](/Mendelian_Randomization/assoc_scripts/3_make_plink_score.sh) to create a plink risk score. Example files SNP selection intermediate files etc. can be found [here](Mendelian_Randomization/example_files/)  
 >* Again we produced estimates for the [direct effect](/Mendelian_Randomization/assoc_scripts/2_assoc_CRP_cause_CpG_DIRECT_EFF.sh) of SNP on the DNA methylation. This was done because we excluded SNPs with a direct effect on the DNA methylation and rerun [plink score script](/Mendelian_Randomization/assoc_scripts/3_make_plink_score.sh) 
 >* We then regressed the CRP polygenic risk score agains DNA methylation using this [script](/Mendelian_Randomization/assoc_scripts/4_run_socore_assoc.sh). 
->* we compared regression coefficients across participating cohorts using this [script}().  Then results were meta-analysed using a [METAL script](Risk_Score/metal_meta.sh) similar to this one. 
->* The above procedure provides us with all input data for the Mendelian Randomisation and triangulation analysis. This was done with this [R-script]()
+>* we compared regression coefficients across participating cohorts using this [script}(/Mendelian_Randomization/MR_analysis/1_QC_input_data.R).  Then results were meta-analysed using a [METAL script](Risk_Score/metal_meta.sh) similar to this one. 
+>* The above procedure provides us with all input data for the Mendelian Randomisation and triangulation analysis. This was done with this [R-script](/Mendelian_Randomization/MR_analysis/2_MR_triangulation_CRP_causesDNAmeth.R)
 
 ### Triangulation Analysis  
-  
+We wanted to understand if there is general trend for all CpGs to be cause or consequence of blood CRP levels. For this we applied a triangulation approach: The effect of the instrument on the outcome (observed effect) should equal the product of the effect of instrument on the exposure and the effect of the exposure on the outcome. For hypotheses 1 the observed effect is CRP ~SNP and the predicted effect is the product of the effects of DNA methylation on the SNPs and CRP on DNA methylation. For hypotheses 2 the observed effect is DNA methylation ~GRS (polygenic CRP risk score) and the predicted effect is the product of effect of CRP ~GRS and CRP ~DNA methylation. If the observed effect is mediated through the predicted effect those will correlate  
   
   
 
