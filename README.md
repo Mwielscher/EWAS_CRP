@@ -45,13 +45,19 @@ We provided scripts to prepare the genotype data for the regression analysis nec
 >* There are example files for every step of the way in this [folder](Mendelian_Randomization/example_files/). This should prevent you from getting stuck because some input file looks differnt  
 <p>
   
-Now that the dataset is ready we can test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
+Now that the dataset is ready we can __test hypothesis 1__, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
 >* [This](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) is how we were looking for instruments for CpG methylation sites. An example file defining the genomic regions for SNP selection can be found [here](Mendelian_Randomization/example_files/)  
 >* We also produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the CRP. This was done because we excluded SNPs with a direct effect on the CRP. That is if SNP~CRP + lnCRP gives a significant association between SNP and lnCRP if we add CRP as covariate to the model. 
 >* regression outlined in the two scripts above were performed in each chohort seperately and then meta analysed. Meta analysis was done very similar in all analysis this [METAL script](Risk_Score/metal_meta.sh) can be changed to do any metanalysis job in this project.  
   
-Finally we used the ratio method to determine significance in the Mendelian Randomization analysis as implemented in the [R package MendelianRandomization](https://academic.oup.com/ije/article/46/6/1734/3112150) where $$MRbeta=BETA CpG~SNP / BETA CRP~SNP$$ and performed a triangulation analysis. This technically simple and was done with this [script](Mendelian_Randomization/MR_analysis/3_CpG_cause_final_version.R) the concept and motivation to do that is explained below.    
+Finally we used the ratio method to determine significance in the Mendelian Randomization analysis as implemented in the [R package MendelianRandomization](https://academic.oup.com/ije/article/46/6/1734/3112150)and performed a triangulation analysis. This technically simple and was done with this [script](Mendelian_Randomization/MR_analysis/3_CpG_cause_final_version.R) the concept and motivation to do that is explained at the end of the next section.    
+
+To __test hypothesis 2__, we used the latest published [GWAS on CRP](https://www.cell.com/ajhg/fulltext/S0002-9297(18)30320-3) to define a set of instruments for CRP. In contrast to testing of hypothesis 1 where we rely on large scale GWAS summary statistics for the association to our outcome (CRP). As there is currently no large scale GWAS summary statistics for Illumina 450k CpG as an outcome available, we created a CRP polygenic risk score starting 52 SNPs. To generate a beta weighted risk score we used PLINK version 1.9. Next, we regressed the risk score against every sentinel CpG under an additive model. CpG ~CRPPRS + age + sex + blood cell estimates + genetic PC [1..10].
+
+>* [script](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) to create a plink risk score. Example files SNP selection intermediate files etc. can be found [here](Mendelian_Randomization/example_files/)  
+>* Again we produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the DNA methylation. This was done because we excluded SNPs with a direct effect on the DNA methylation and rerun [plink score script]() 
+>* regression outlined in the two scripts above were performed in each chohort seperately and then meta analysed. Meta analysis was done very similar in all analysis this [METAL script
 
 ## Overrepresentation analysis
 
