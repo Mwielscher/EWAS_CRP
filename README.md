@@ -37,8 +37,8 @@ For data integrated with [CPACOR pipeline](https://www.ncbi.nlm.nih.gov/pmc/arti
   
 ## Mendelian Randomization
 We performed a Mendelian Randomization analysis to better understand the reasons for the differential DNA methylation associated to CRP. We performed analysis to investigate 2 Hypothesis: 
->1.DNA methylation is causal for CRP changes
->2.DNA methylation is a consequence of changed CRP levels.
+>1.DNA methylation is causal for CRP changes  
+>2.DNA methylation is a consequence of changed CRP levels  
 <p>
  
   
