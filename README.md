@@ -71,10 +71,10 @@ We wanted to understand if there is general trend for all CpGs to be cause or co
 ## Association to clinical phenotypes 
 
 We calculated a beta weighted risk score using the coefficients from the trans-ethnic discovery analysis (similar to a polygenic risk score in GWAS).
-For every participant in each study:
+For every participant in each study:  
 CpGriskSCORE =  sum( CpGmethylation x  CoefficienttransEthnicDiscovery)  
-Then we performed logistic regression model for the CpGriskSCORE against each outcome. Depending on availability of phenotypes across cohorts we combined the effect sizes and standard errors using invers variance weighted approach as implemented in METAL software. We present meta analyzed effect sizes (logODDs) and P-values from logistic regression. Odd ratios were transformed to produce adjusted relative risk estimates:
-RR=odds ratio/1- (lifetime risk) + (life time risk x odds ratio). 
+Then we performed logistic regression model for the CpGriskSCORE against each outcome. Depending on availability of phenotypes across cohorts we combined the effect sizes and standard errors using invers variance weighted approach as implemented in METAL software. We present meta analyzed effect sizes (logODDs) and P-values from logistic regression. Odd ratios were transformed to produce adjusted relative risk estimates:  
+RR=odds ratio/1- (lifetime risk) + (life time risk x odds ratio)  
 We used lifetime risk estimates from current literature: [COPD 11.45%](https://erj.ersjournals.com/content/42/4/964.long), [T2D 39.9%](https://www.thelancet.com/journals/landia/article/PIIS2213-8587(14)70161-5/fulltext), [MI 24.8%](https://www.nejm.org/doi/full/10.1056/NEJMoa1804492) [CAD 40.15%](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)75029-7/fulltext) and [Hypertension 81%](https://jamanetwork.com/journals/jamacardiology/fullarticle/2728380).
 
 
