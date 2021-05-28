@@ -1,5 +1,9 @@
 ## Table of contents
-
+# Table of Contents
+1. [About this Repository](## About this Repository)
+2. [Meta analysis](## Meta analysis)
+3. [Third Example](#third-example)
+4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
 ## About this Repository
 This repository accompanies the paper __"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__ 
@@ -12,7 +16,7 @@ This repository accompanies the paper __"DNA methylation signature of chronic lo
 <p>
 <br/>
 
-The scripts to perform those analysis are depoisited in this Repo. Those are costum scripts, which were shared with collaborators for the paper or run on my local destop computer. Most Shell script are designed to run on a [SGE cluster](http://gridscheduler.sourceforge.net/htmlman/manuals.html). There are short example files with the folders to test scripts. 
+The scripts to perform those analysis are depoisited in this Repo. Those are costum scripts, which were shared with collaborators for the paper or run on my local destop computer. Most Shell script are designed to run on a [SGE cluster](http://gridscheduler.sourceforge.net/htmlman/manuals.html). There are short example files within the folders to test scripts. 
   
 ## Meta analysis
 
