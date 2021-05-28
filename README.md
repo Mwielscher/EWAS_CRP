@@ -77,4 +77,5 @@ Then we performed logistic regression model for the CpGriskSCORE against each ou
 RR=odds ratio/1- (lifetime risk) + (life time risk x odds ratio)  
 We used lifetime risk estimates from current literature: [COPD 11.45%](https://erj.ersjournals.com/content/42/4/964.long), [T2D 39.9%](https://www.thelancet.com/journals/landia/article/PIIS2213-8587(14)70161-5/fulltext), [MI 24.8%](https://www.nejm.org/doi/full/10.1056/NEJMoa1804492) [CAD 40.15%](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(05)75029-7/fulltext) and [Hypertension 81%](https://jamanetwork.com/journals/jamacardiology/fullarticle/2728380).
 
-
+>* [script](/Risk_Score/CRP_CpG_risk_score.R) to calculate risk score and run regressions against clinical relevant phenoptype. 
+>* this is a good onlie [tool](https://clincalc.com/Stats/ConvertOR.aspx) to calculate the adjusted relative risk
