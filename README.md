@@ -48,7 +48,8 @@ We provided scripts to prepare the genotype data for the regression analysis nec
 Now that the dataset is ready we can test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
 >* [This](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) is how we were looking for instruments for CpG methylation sites. An example file defining the genomic regions for SNP selection can be found [here](Mendelian_Randomization/example_files/)  
->* We also produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) of SNP on the CRP. This was done because we excluded SNPs with a direct effect on the CRP. That is if SNP~CRP + lnCRP gives a significant association between SNP and lnCRP if we add CRP as covariate to the model
+>* We also produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the CRP. This was done because we excluded SNPs with a direct effect on the CRP. That is if SNP~CRP + lnCRP gives a significant association between SNP and lnCRP if we add CRP as covariate to the model. 
+>* regression outlined in the two scripts above were performed in each chohort seperately and then meta analysed. Meta analysis was done very similar in all analysis this METAL script can be changed to do any metanalysis job in this project.  
   
 ## Overrepresentation analysis
 
