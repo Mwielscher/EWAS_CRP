@@ -4,7 +4,7 @@
 ## About this Repository
 This repository accompanies the paper __"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__ 
 
-![GitHub Logo](/images/logo.png)
+![Overview Figure](/img/FIGURE_1_ok.jpg)
 Format: ![Alt Text](url)
 
 ## Meta analysis
