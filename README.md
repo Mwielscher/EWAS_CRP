@@ -33,8 +33,6 @@ We wanted to remove all unwanted variation from the DNA methylation values. To a
 DNAmeth ~ age + sex + CD4T + NK + Bcell + Mono + Neu + Eos + batch +[..]  
 For data integrated with [CPACOR pipeline](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365767/) we added the first 10 principal components of the control probe PCs. 
 
-  
-  
 ## Mendelian Randomization
 We performed a Mendelian Randomization analysis to better understand the reasons for the differential DNA methylation associated to CRP. We performed analysis to investigate 2 Hypothesis: 
 >1. DNA methylation is causal for CRP changes  
