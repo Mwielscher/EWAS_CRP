@@ -9,9 +9,9 @@
 ## About this Repository
 This repository accompanies the paper __"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__ 
 <br/><br/>
-<p align="center">
-<img src="/img/FIGURE_1_ok.jpg" alt="Overview Figure" width="600"/>
-<br/><br/>
+#<p align="center">
+#<img src="/img/FIGURE_1_ok.jpg" alt="Overview Figure" width="600"/>
+#<br/><br/>
 
 > **_Abstract:_**  We performed a trans-ethnic Epigenome Wide Association study on 22,774 individuals to describe the DNA methylation signature of chronic low-grade inflammation as measured by C-Reactive protein (CRP). We found 1,511 independent loci associated with CRP. These CpG sites showed correlation structure across chromosomes, and were primarily situated in euchromatin, depleted in CpG islands and enriched in transcription factor binding sites and genomic enhancer regions. Mendelian randomisation analysis suggests altered CpG methylation is a consequence of increased CRP levels. Mediation analysis revealed obesity and smoking as important underlying factors for changed CpG methylation. Finally, we found that an activated CpG signature significantly increases the risk for cardiometabolic diseases and COPD. 
 <p>
