@@ -41,8 +41,9 @@ We performed a Mendelian Randomization analysis to better understand the reasons
 To test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
 We provided scripts to prepare the genotype data for the regression analysis necessary to run the Mendelian Randomization analysis:  
->* This [script](Mendelian_Randomization/prepare_dataset/QC_1_subset_to_meth_samples.sh) subsets your data set to samples required for Mendelian randomisation. This is necessary because in our experience the cohorts have DNA methylation data available just for a subset of samples.  
->* This [script](Mediation_Analysis/2_mediation_analysis.R) combines your genetic data, which in our experience were usually stored one file per chromosome, to one file and creates a vcf file and a plink file set of your dataset  
+>* This QC [script](Mendelian_Randomization/prepare_dataset/QC_1_subset_to_meth_samples.sh) subsets your data set to samples required for Mendelian randomisation. This is necessary because in our experience the cohorts have DNA methylation data available just for a subset of samples.  
+>* This QC [script](Mendelian_Randomization/prepare_dataset/QC_2_concat_and_make_plink.sh) combines your genetic data, which in our experience were usually stored one file per chromosome, to one file and creates a vcf file and a plink file set of your dataset  
+>* This QC [script](Mendelian_Randomization/prepare_dataset/QC_3_make_kinship_matrix.sh) will calculate a kinship matrix for your dataset. You can use this in your regression analysis to protect your results being under the influence of cryptic relatedness and population stratification. This was a very important step for NFBC data, but might not be necessary in your cohort   
 <p>
   
 continue here  
