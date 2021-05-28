@@ -39,11 +39,12 @@ We performed a Mendelian Randomization analysis to better understand the reasons
 >2. DNA methylation is a consequence of changed CRP levels  
 <p>
 To test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
-Regressions were performed using [rvtests software](https://github.com/zhanxw/rvtests)  
+Regressions were performed using [CPACOR pipeline](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365767/)  [rvtests software](https://github.com/zhanxw/rvtests)  
 We provided scripts to prepare the genotype data for the regression analysis necessary to run the Mendelian Randomization analysis:  
 <p>
->* [script]() to perform  
->* [script]() to do that  
+>* [script](Mediation_Analysis/1_resid_correlation_mediation_regression.R) to run 4 necessary regression analysis. This script also contains code to rsidualize your methylation data and a simple recipe to calculate a correlation matrix of your set of CpG markers.  
+>* [script](Mediation_Analysis/2_mediation_analysis.R) to run the regressions, meta analysis of the individual regressions and Aroian Sobel test
+<p>
   
 ## Overrepresentation analysis
 
