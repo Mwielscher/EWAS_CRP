@@ -55,9 +55,16 @@ Finally we used the ratio method to determine significance in the Mendelian Rand
 
 To __test hypothesis 2__, we used the latest published [GWAS on CRP](https://www.cell.com/ajhg/fulltext/S0002-9297(18)30320-3) to define a set of instruments for CRP. In contrast to testing of hypothesis 1 where we rely on large scale GWAS summary statistics for the association to our outcome (CRP). As there is currently no large scale GWAS summary statistics for Illumina 450k CpG as an outcome available, we created a CRP polygenic risk score starting 52 SNPs. To generate a beta weighted risk score we used PLINK version 1.9. Next, we regressed the risk score against every sentinel CpG under an additive model. CpG ~CRPPRS + age + sex + blood cell estimates + genetic PC [1..10].
 
->* [script](Mendelian_Randomization/assoc_scripts/1_assoc_CpG_cause_CRP.sh) to create a plink risk score. Example files SNP selection intermediate files etc. can be found [here](Mendelian_Randomization/example_files/)  
->* Again we produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the DNA methylation. This was done because we excluded SNPs with a direct effect on the DNA methylation and rerun [plink score script]() 
->* regression outlined in the two scripts above were performed in each chohort seperately and then meta analysed. Meta analysis was done very similar in all analysis this [METAL script
+>* [script](/Mendelian_Randomization/assoc_scripts/3_make_plink_score.sh) to create a plink risk score. Example files SNP selection intermediate files etc. can be found [here](Mendelian_Randomization/example_files/)  
+>* Again we produced estimates for the [direct effect](/Mendelian_Randomization/assoc_scripts/2_assoc_CRP_cause_CpG_DIRECT_EFF.sh) of SNP on the DNA methylation. This was done because we excluded SNPs with a direct effect on the DNA methylation and rerun [plink score script](/Mendelian_Randomization/assoc_scripts/3_make_plink_score.sh) 
+>* We then regressed the CRP polygenic risk score agains DNA methylation using this [script](/Mendelian_Randomization/assoc_scripts/4_run_socore_assoc.sh). 
+>* we compared regression coefficients across participating cohorts using this [script}().  Then results were meta-analysed using a [METAL script](Risk_Score/metal_meta.sh) similar to this one. 
+>* The above procedure provides us with all input data for the Mendelian Randomisation and triangulation analysis. This was done with this [R-script]()
+
+### Triangulation Analysis  
+  
+  
+  
 
 ## Overrepresentation analysis
 
