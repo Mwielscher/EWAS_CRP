@@ -51,7 +51,7 @@ Regressions were performed using [rvtests software](https://github.com/zhanxw/rv
 >* We also produced estimates for the [direct effect](Mendelian_Randomization/assoc_scripts/1a_assoc_CpG_cause_CRP_DIRECT_EFF.sh) of SNP on the CRP. This was done because we excluded SNPs with a direct effect on the CRP. That is if SNP~CRP + lnCRP gives a significant association between SNP and lnCRP if we add CRP as covariate to the model. 
 >* regression outlined in the two scripts above were performed in each chohort seperately and then meta analysed. Meta analysis was done very similar in all analysis this [METAL script](Risk_Score/metal_meta.sh) can be changed to do any metanalysis job in this project.  
   
-Finally we used the ratio method to determine significance in the Mendelian Randomization analysis as implemented in the [R package MendelianRandomization](https://academic.oup.com/ije/article/46/6/1734/3112150) where MRbeta=BETA CpG~SNP / BETA CRP~SNP and performed a triangulation analysis. This technically simple and was done with this [script](Mendelian_Randomization/MR_analysis/3_CpG_cause_final_version.R) the concept and motivation to do that is explained below.    
+Finally we used the ratio method to determine significance in the Mendelian Randomization analysis as implemented in the [R package MendelianRandomization](https://academic.oup.com/ije/article/46/6/1734/3112150) where $$MRbeta=BETA CpG~SNP / BETA CRP~SNP$$ and performed a triangulation analysis. This technically simple and was done with this [script](Mendelian_Randomization/MR_analysis/3_CpG_cause_final_version.R) the concept and motivation to do that is explained below.    
 
 ## Overrepresentation analysis
 
