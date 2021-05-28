@@ -37,7 +37,7 @@ For data integrated with [CPACOR pipeline](https://www.ncbi.nlm.nih.gov/pmc/arti
 We performed a Mendelian Randomization analysis to better understand the reasons for the differential DNA methylation associated to CRP. We performed analysis to investigate 2 Hypothesis: 
 >1. DNA methylation is causal for CRP changes  
 >2. DNA methylation is a consequence of changed CRP levels  
-<p>
+
 To test hypothesis 1, we needed to find instruments for DNA methylation. For this we regressed DNA methylation value of every CpG against all SNPs present in “cis” of the concordant CpG. The cis-region of every sentinel CpG was defined, as it’s chromosomal position +/- 500kb. 
 Regressions were performed using [CPACOR pipeline](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4365767/)  [rvtests software](https://github.com/zhanxw/rvtests)  
 We provided scripts to prepare the genotype data for the regression analysis necessary to run the Mendelian Randomization analysis:  
