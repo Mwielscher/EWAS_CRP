@@ -2,7 +2,6 @@
 #PBS -l select=1:ncpus=1:mem=20GB
 #PBS -l walltime=01:20:00
 #PBS -N smoke_metal
-
 module load metal/2016-02-02
 
 cat <<EOF > metal_script
