@@ -68,11 +68,11 @@ For this we performed permutation tests. First, we assessed the number of overla
 We calculated overlaps to the CpG annotation as given in the [Illumina Manifest file](https://bioconductor.org/packages/release/data/annotation/html/IlluminaHumanMethylation450kmanifest.html). We retrieved DNaseI-accessible sites from [Encode project](http://www.uwencode.org/proj/hotspot), specifically gapped peaks from Release 9 called with MACSv2.0.10. For histone marks (H3K9 and H3K27) were retrieved gapped peak data from Roadmap project for a collection of 127 tissues and cell lines as well as probabilities for [Roadmap 15 state chromatin model](https://www.nature.com/articles/nature14248) for selected cell lines. Encode Transcription factor binding sites were retrieved from [UCSC browser](http://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg19&g=wgEncodeRegTfbsClusteredV3). Next, we mapped Illuminas 450k probes to the GWAS catalogue hits (downloaded 20170626) of traits having 50 or more hits recorded in the catalogue. We allowed a window of 1MB to match the 450k probes to each GWAS catalogue entry and removed one or more hits in case they were overlapping. Finally, we retrieved chromosome conformation capture data (HiC) as described by [Bing Ren et al](https://www.nature.com/articles/nature11082) 
 
 Technically, this was done in a very similar way for all overlap calculations. We will give all scripts necessary for overlaps to 15 state Roadmap chromatin model as an example:    
->>* First we used this [script](EWAS_CRP/OverRepresentation_Analysis/helper_scripts_create_wget_file.pl) to create a [wget script]() for data download  
+>>* First we used this [script](EWAS_CRP/OverRepresentation_Analysis/helper_scripts_create_wget_file.pl) to create a [wget script](EWAS_CRP/OverRepresentation_Analysis/wget_example.sh) for data download  
 >>* For this data we first had to [add the actual chromosomal postion](EWAS_CRP/OverRepresentation_Analysis/chromState_make_chrPOS.pl) to the files and then we combined those files into [one file per chromatin state](EWAS_CRP/OverRepresentation_Analysis/chromState_create_coreFILES.pl). Finally, we mapped the chromatin states to the 450K probes using this [script](EWAS_CRP/OverRepresentation_Analysis/chromState_annotate_to_450k.sh).    
 >>* Then we run the actual [script](EWAS_CRP/OverRepresentation_Analysis/chromState_permutation_test.sh) that performes the perumtation tests  
 >>* The perumutation test script produces one file per chromatin state - those were combined with this helper [script](EWAS_CRP/OverRepresentation_Analysis/helper_scripts_combine_results.sh)  
->>* some examples on how to visualize the data are given in this [script]()  
+
 
   
   
