@@ -75,7 +75,7 @@ Technically, this was done in a very similar way for all overlap calculations. W
 >>* Then we run the actual [script](/OverRepresentation_Analysis/chromState_permutation_test.sh) that performes the perumtation tests  
 >>* The perumutation test script produces one file per chromatin state - those were combined with this helper [script](/OverRepresentation_Analysis/helper_scripts_combine_results.sh)  
 
-Here we deposited data wrangling scripts for [Encode Transcription factor Biniding sites dataset](), [GWAS catalogue](), [HiC dataset]()  
+Here we deposited data wrangling scripts for [Encode Transcription factor Biniding sites dataset](/OverRepresentation_Analysis/helper_script_ENCODE_TF.pl), [GWAS catalogue](/OverRepresentation_Analysis/helper_script_GWAS_cat.pl), [HiC dataset](/OverRepresentation_Analysis/helper_script_HiC.pl)  
   
   
   
