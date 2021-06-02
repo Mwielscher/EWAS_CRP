@@ -4,7 +4,6 @@
 #PBS -N run_chrSTATE
 
 tid=$PBS_ARRAY_INDEX
-
 ###  15 jobs 
 
 mkdir data
