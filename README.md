@@ -21,7 +21,7 @@ This repository accompanies the paper [__"DNA methylation signature of chronic l
 
 
 The scripts to perform the analyses presented in the manuscript are deposited in this repository. These are custom scripts, which were shared with collaborators for the manuscript or run on my local destop computer. Most shell scripts are designed to run on a [SGE cluster](http://gridscheduler.sourceforge.net/htmlman/manuals.html). There are short example files within the folders to test scripts.  
-  <br/><br/>
+  <br/>
 Summary stats of the meta-analysis are available [here](https://figshare.com/articles/dataset/association_results_from_trans_ethnic_meta_analysis/19188674)  
   
 ## Meta-analysis  
