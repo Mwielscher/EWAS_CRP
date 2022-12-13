@@ -7,7 +7,7 @@
 5. [Association to clinical phenotypes](#Association-to-clinical-phenotypes)  
 
 ## About this Repository
-This repository accompanies the paper __"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__ 
+This repository accompanies the paper [__"DNA methylation signature of chronic low-grade inflammation and its role in cardio-respiratory diseases"__](https://www.nature.com/articles/s41467-022-29792-6) 
 <br/><br/> <br/>
 
 <p align="center">
